@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>The Introductory Rites</h1>
+        <div class="section">
+            <div class="priest">
+                In the name of the Father, and of the Son, and of the Holy Spirit.
+            </div>
+            <div class="umat">
+                Amen.
+            </div>
+        </div>
+        <div class="section">
+            <select class="vselect" id="v-intro" onchange="updateSelection(this)">
+                <option value="1" selected>Variant 1</option>
+                <option value="2">Variant 2</option>
+                <option value="3">Variant 3</option>
+                <option value="bishop">Bishop</option>
+            </select>
+            <div class="priest" data-variant-id="v-intro" data-variant="1">
+                The grace of our Lord Jesus Christ,<br>
+                and the love of God,<br>
+                and the communion of the Holy Spirit<br>
+                be with you all.
+            </div>
+            <div class="priest" data-variant-id="v-intro" data-variant="2">
+                Grace to you and peace from God our Father<br>
+                and the Lord Jesus Christ.
+            </div>
+            <div class="priest" data-variant-id="v-intro" data-variant="3">
+                The Lord be with you.
+            </div>
+            <div class="priest" data-variant-id="v-intro" data-variant="bishop">
+                Peace be with you.
+            </div>
+            <div class="umat">
+                And with your spirit.
+            </div>
+        </div>
+        <h1>Penitential Act</h1>
+        <div class="section">
+            <div class="priest">
+                Brethren (brothers and sisters), let us acknowledge our sins,<br>
+                and so prepare ourselves to celebrate the sacred mysteries.
+            </div>
+            <select class="vselect" id="v-pen" onchange="updateSelection(this)">
+                <option value="1" selected>Variant 1</option>
+                <option value="2">Variant 2</option>
+                <option value="3">Variant 3</option>
+            </select>
+            <div data-variant-id="v-pen" data-variant="1">
+                <div class="umat">
+                    I confess to almighty God<br>
+                    and to you, my brothers and sisters,<br>
+                    that I have greatly sinned,<br>
+                    in my thoughts and in my words,<br>
+                    in what I have done and in what I have failed to do,
+                </div>
+                <div class="note">
+                    And, striking their breast, they say:
+                </div>
+                <div class="umat">
+                    through my fault, through my fault,<br>
+                    through my most grievous fault;
+                </div>
+                <div class="note">
+                    Then continue:
+                </div>
+                <div class="umat">
+                    therefore I ask blessed Mary ever-Virgin,<br>
+                    all the Angels and Saints,<br>
+                    and you, my brothers and sisters,<br>
+                    to pray for me to the Lord our God.
+                </div>
+                <div class="priest">
+                    May almighty God have mercy on us,<br>
+                    forgive us our sins,<br>
+                    and bring us to everlasting life.
+                </div>
+                <div class="umat">Amen</div>
+            </div>
+            <div data-variant-id="v-pen" data-variant="2">
+                <div class="priest">Have mercy on us, O Lord.</div>
+                <div class="umat">For we have sinned against you.</div>
+                <div class="priest">Show us, O Lord, your mercy.</div>
+                <div class="umat">And grant us your salvation.</div>
+                <div class="priest">
+                    May almighty God have mercy on us,<br>
+                    forgive us our sins,<br>
+                    and bring us to everlasting life.
+                </div>
+            </div>
+            <div data-variant-id="v-pen" data-variant="3">
+                <div class="priest">
+                    You were sent to heal the contrite of heart:<br>
+                    Lord, have mercy.
+                </div>
+                <div class="umat">Lord, have mercy.</div>
+                <div class="priest">You came to call sinners: Christ, have mercy.</div>
+                <div class="umat">Christ, have mercy.</div>
+                <div class="priest">
+                    You are seated at the right hand of the Father to intercede for us:<br>
+                    Lord, have mercy.
+                </div>
+                <div class="umat">Lord, have mercy.</div>
+                <div class="priest">
+                    May almighty God have mercy on us,<br>
+                    forgive us our sins,<br>
+                    and bring us to everlasting life.
+                </div>
+                <div class="umat">Amen</div>
+                <hr>
+                <div class="priest">Lord, have mercy.</div>
+                <div class="umat">Lord, have mercy.</div>
+                <div class="priest">Christ, have mercy.</div>
+                <div class="umat">Christ, have mercy.</div>
+                <div class="priest">Lord, have mercy.</div>
+                <div class="umat">Lord, have mercy.</div>
+                <hr>
+                <div class="note">
+                    When prescribed, this hymn is either sung or said:
+                </div>
+                <div class="priest">
+                    Glory to God in the highest,<br>
+                    and on earth peace to people of good will.<br>
+                    We praise you,<br>
+                    we bless you,<br>
+                    we adore you,<br>
+                    we glorify you,<br>
+                    we give you thanks for your great glory,<br>
+                    Lord God, heavenly King,<br>
+                    O God, almighty Father.<br>
+                    Lord Jesus Christ, Only Begotten Son,<br>
+                    Lord God, Lamb of God, Son of the Father,<br>
+                    you take away the sins of the world,<br>
+                    have mercy on us;<br>
+                    you take away the sins of the world,<br>
+                    receive our prayer;<br>
+                    you are seated at the right hand of the Father,<br>
+                    have mercy on us.<br>
+                    For you alone are the Holy One,<br>
+                    you alone are the Lord,<br>
+                    you alone are the Most High,<br>
+                    Jesus Christ,<br>
+                    with the Holy Spirit,<br>
+                    in the glory of God the Father.<br>
+                    Amen.
+                </div>
+            </div>
+        </div>
+        <h1>The Liturgy of the Word</h1>
+        <div class="section">
+            <div class="note">
+                Sit and listen to the readings.<br>
+                To indicate the end of the reading, the reader will acclaim:
+            </div>
+            <div class="priest">The word of the Lord.</div>
+            <div class="note">Reply with:</div>
+            <div class="umat">Thanks be to God.</div>
+            <div class="note">Primary bible readings:</div>
+            <div class="priest">The Lord be with you.</div>
+            <div class="umat">And with your spirit.</div>
+            <div class="priest">A reading from the holy Gospel according to ...</div>
+            <div class="note">Reply, while making sign on our forehead, lips, and breast:</div>
+            <div class="umat">Glory to you, O Lord.</div>
+            <div class="note">At the end of the Gospel, the Priest acclaims:</div>
+            <div class="priest">The Gospel of the Lord.</div>
+            <div class="umat">Praise to you, Lord Jesus Christ.</div>
+            <h2>Homily</h2>
+        </div>
+        <h1>Profession of Faith</h1>
+        <div class="section">
+            <div class="note">After the homily, acclaim this Profession of Faith</div>
+            <select class="vselect" id="v-pof" onchange="updateSelection(this)">
+                <option value="ac" selected>Apostles' Creed</option>
+                <option value="nc">Niceno-Constantinopolitan</option>
+            </select>
+            <div data-variant-id="v-pof" data-variant="ac">
+                <div class="umat">
+                    I believe in God,<br>
+                    the Father almighty,<br>
+                    Creator of heaven and earth,<br>
+                    and in Jesus Christ, his only Son, our Lord,
+                </div>
+                <div class="note">
+                    At the words that follow, up to and including the <b>Virgin Mary</b>, all bow.
+                </div>
+                <div class="umat">
+                    who was conceived by the Holy Spirit,<br>
+                    born of the Virgin Mary,<br>
+                    suffered under Pontius Pilate,<br>
+                    was crucified, died and was buried;<br>
+                    he descended into hell;<br>
+                    on the third day he rose again from the dead;<br>
+                    he ascended into heaven,<br>
+                    and is seated at the right hand of God the Father almighty;<br>
+                    from there he will come to judge the living and the dead.<br>
+                    I believe in the Holy Spirit,<br>
+                    the holy catholic Church,<br>
+                    the communion of saints,<br>
+                    the forgiveness of sins,<br>
+                    the resurrection of the body,<br>
+                    and life everlasting. Amen.
+                </div>
+            </div>
+            <div data-variant-id="v-pof" data-variant="nc">
+                <div class="umat">
+                    I believe in one God,<br>
+                    the Father almighty,<br>
+                    maker of heaven and earth,<br>
+                    of all things visible and invisible.<br>
+                    I believe in one Lord Jesus Christ,<br>
+                    the Only Begotten Son of God,<br>
+                    born of the Father before all ages.<br>
+                    God from God, Light from Light,<br>
+                    true God from true God,<br>
+                    begotten, not made, consubstantial with the Father;<br>
+                    through him all things were made.<br>
+                    For us men and for our salvation<br>
+                    he came down from heaven,
+                </div>
+                <div class="note">
+                    At the words that follow up to and including <b>and became man</b>, all bow.
+                </div>
+                <div class="umat">
+                    and by the Holy Spirit was incarnate of the Virgin Mary,<br>
+                    and became man.<br>
+                    For our sake he was crucified under Pontius Pilate,<br>
+                    he suffered death and was buried,<br>
+                    and rose again on the third day<br>
+                    in accordance with the Scriptures.<br>
+                    He ascended into heaven<br>
+                    and is seated at the right hand of the Father.<br>
+                    He will come again in glory<br>
+                    to judge the living and the dead<br>
+                    and his kingdom will have no end.<br>
+                    I believe in the Holy Spirit, the Lord, the giver of life,<br>
+                    who proceeds from the Father and the Son,<br>
+                    who with the Father and the Son is adored and glorified,<br>
+                    who has spoken through the prophets.<br>
+                    I believe in one, holy, catholic and apostolic Church.<br>
+                    I confess one Baptism for the forgiveness of sins<br>
+                    and I look forward to the resurrection of the dead<br>
+                    and the life of the world to come. Amen
+                </div>
+            </div>
+        </div>
+        <h1>Universal Prayers</h1>
+        <div class="section">
+            TBD
+        </div>
+        <h1>The Liturgy of the Eucharist</h1>
+        <div class="section">
+            <h2>Preparation</h2>
+            <div class="priest">
+                Blessed are you, Lord God of all creation,<br>
+                for through your goodness we have received<br>
+                the bread we offer you:<br>
+                fruit of the earth and work of human hands,<br>
+                it will become for us the bread of life.
+            </div>
+            <div class="umat">Blessed be God for ever.</div>
+            <div class="priest">
+                By the mystery of this water and wine<br>
+                may we come to share in the divinity of Christ<br>
+                who humbled himself to share in our humanity.
+            </div>
+            <div class="note">
+                Priest then takes the chalice and holds it slightly raised above the altar
+            </div>
+            <div class="priest">
+                Blessed are you, Lord God of all creation,<br>
+                for through your goodness we have received<br>
+                the wine we offer you:<br>
+                fruit of the vine and work of human hands,<br>
+                it will become our spiritual drink.
+            </div>
+            <div class="umat">Blessed be God for ever.</div>
+            <div class="priest">
+                With humble spirit and contrite heart<br>
+                may we be accepted by you, O Lord,<br>
+                and may our sacrifice in your sight this day<br>
+                be pleasing to you, Lord God.
+            </div>
+            <div class="priest">
+                Wash me, O Lord, from my iniquity<br>
+                and cleanse me from my sin.
+            </div>
+            <div class="umat">
+                May the Lord accept the sacrifice at your hands<br>
+                for the praise and glory of his name,<br>
+                for our good<br>
+                and the good of all his holy Church.
+            </div>
+            <div class="note">
+                Priest, with hands extended, says the Prayer over the Offerings,<br>
+                at the end of which the people acclaim:
+            </div>
+            <div class="umat">Amen</div>
+        </div>
+        <h1>The Eucharistic Prayer</h1>
+        <div class="section">
+            <select class="vselect" id="v-ep" onchange="updateSelection(this)">
+                <option value="1" selected>Variant 1</option>
+                <option value="2">Variant 2</option>
+                <option value="3">Variant 3</option>
+                <option value="4">Variant 4</option>
+            </select>
+            <div data-variant-id="v-ep" data-variant="1">
+                <div class="priest">The Lord be with you.</div>
+                <div class="umat">And with your spirit.</div>
+                <div class="priest">Lift up your hearts.</div>
+                <div class="umat">We lift them up to the Lord.</div>
+                <div class="priest">Let us give thanks to the Lord our God.</div>
+                <div class="umat">It is right and just.</div>
+                <div class="note">The priest continues with the Preface.</div>
+                <div class="umat">
+                    Holy, Holy, Holy Lord God of hosts.<br>
+                    Heaven and earth are full of your glory.<br>
+                    Hosanna in the highest.<br>
+                    Blessed is he who comes in the name of the Lord.<br>
+                    Hosanna in the highest.
+                </div>
+                <div class="priest">
+                    To you, therefore, most merciful Father,<br>
+                    we make humble prayer and petition<br>
+                    through Jesus Christ, your Son, our Lord:<br>
+                    that you accept<br>
+                    and bless ✠ these gifts, these offerings,<br>
+                    these holy and unblemished sacrifices,<br>
+                    which we offer you firstly<br>
+                    for your holy catholic Church.<br>
+                    Be pleased to grant her peace,<br>
+                    to guard, unite and govern her<br>
+                    throughout the whole world,<br>
+                    together with your servant N. our Pope<br>
+                    and N. our Bishop,*<br>
+                    and all those who, holding to the truth,<br>
+                    hand on the catholic and apostolic faith.
+                </div>
+                <div class="note">Commemoration of the Living.</div>
+                <div class="priest">
+                    Remember, Lord, your servants N. and N.<br>
+                    and all gathered here,<br>
+                    whose faith and devotion are known to you.<br>
+                    For them, we offer you this sacrifice of praise<br>
+                    or they offer it for themselves<br>
+                    and all who are dear to them:<br>
+                    for the redemption of their souls,<br>
+                    in hope of health and well-being,<br>
+                    and paying their homage to you,<br>
+                    the eternal God, living and true.
+                </div>
+                <div class="note">Within the Action.</div>
+                <div class="priest">
+                    In communion with those whose memory we venerate,<br>
+                    especially the glorious ever-Virgin Mary,<br>
+                    Mother of our God and Lord, Jesus Christ,<br>
+                    † and blessed Joseph, her Spouse,<br>
+                    your blessed Apostles and Martyrs,<br>
+                    Peter and Paul, Andrew,<br>
+                    (James, John,<br>
+                    Thomas, James, Philip,<br>
+                    Bartholomew, Matthew,<br>
+                    Simon and Jude;<br>
+                    Linus, Cletus, Clement, Sixtus,<br>
+                    Cornelius, Cyprian,<br>
+                    Lawrence, Chrysogonus,<br>
+                    John and Paul,<br>
+                    Cosmas and Damian)<br>
+                    and all your Saints;<br>
+                    we ask that through their merits and prayers,<br>
+                    in all things we may be defended<br>
+                    by your protecting help.<br>
+                    (Through Christ our Lord. Amen.)
+                </div>
+                <hr>
+                <select class="vselect" id="v-ep-v1" onchange="updateSelection(this)">
+                    <option value="1" selected>On the Nativity of the Lord</option>
+                    <option value="2">On the Epiphany of the Lord</option>
+                    <option value="3">Easter Vigil until the Second Sunday of Easter</option>
+                    <option value="4">On the Ascension of the Lord</option>
+                    <option value="5">On Pentecost Sunday</option>
+                </select>
+                <div class="priest" data-variant-id="v-ep-v1" data-variant="1">
+                    Celebrating the most sacred night (day)<br>
+                    on which blessed Mary the immaculate Virgin<br>
+                    brought forth the Savior for this world,<br>
+                    and in communion with those whose memory we venerate,<br>
+                    especially the glorious ever-Virgin Mary,<br>
+                    Mother of our God and Lord, Jesus Christ, †
+                </div>
+                <div class="priest" data-variant-id="v-ep-v1" data-variant="2">
+                    Celebrating the most sacred day<br>
+                    on which your Only Begotten Son,<br>
+                    eternal with you in your glory,<br>
+                    appeared in a human body, truly sharing our flesh,<br>
+                    and in communion with those whose memory we venerate,<br>
+                    especially the glorious ever-Virgin Mary,<br>
+                    Mother of our God and Lord, Jesus Christ, †
+                </div>
+                <div class="priest" data-variant-id="v-ep-v1" data-variant="3">
+                    Celebrating the most sacred night (day)<br>
+                    of the Resurrection of our Lord Jesus Christ in the flesh,<br>
+                    and in communion with those whose memory we venerate,<br>
+                    especially the glorious ever-Virgin Mary,<br>
+                    Mother of our God and Lord, Jesus Christ, †
+                </div>
+                <div class="priest" data-variant-id="v-ep-v1" data-variant="4">
+                    Celebrating the most sacred day<br>
+                    on which your Only Begotten Son, our Lord,<br>
+                    placed at the right hand of your glory<br>
+                    our weak human nature,<br>
+                    which he had united to himself,<br>
+                    and in communion with those whose memory we venerate,<br>
+                    especially the glorious ever-Virgin Mary,<br>
+                    Mother of our God and Lord, Jesus Christ, †
+                </div>
+                <div class="priest" data-variant-id="v-ep-v1" data-variant="5">
+                    Celebrating the most sacred day of Pentecost,<br>
+                    on which the Holy Spirit<br>
+                    appeared to the Apostles in tongues of fire,<br>
+                    and in communion with those whose memory we venerate,<br>
+                    especially the glorious ever-Virgin Mary,<br>
+                    Mother of our God and Lord, Jesus Christ, †
+                </div>
+                <hr>
+                <select class="vselect" id="v-ep-v1-suffix" onchange="updateSelection(this)">
+                    <option value="regular" selected>Regular</option>
+                    <option value="easter">Easter Vigil until the Second Sunday of Easter</option>
+                </select>
+                <div class="priest" data-variant-id="v-ep-v1-suffix" data-variant="regular">
+                    Therefore, Lord, we pray:<br>
+                    graciously accept this oblation of our service,<br>
+                    that of your whole family;<br>
+                    order our days in your peace,<br>
+                    and command that we be delivered from eternal damnation<br>
+                    and counted among the flock of those you have chosen.<br>
+                    (Through Christ our Lord. Amen.)
+                </div>
+                <div class="priest" data-variant-id="v-ep-v1-suffix" data-variant="easter">
+                    Therefore, Lord, we pray:<br>
+                    graciously accept this oblation of our service,<br>
+                    that of your whole family,<br>
+                    which we make to you<br>
+                    also for those to whom you have been pleased to give<br>
+                    the new birth of water and the Holy Spirit,<br>
+                    granting them forgiveness of all their sins;<br>
+                    order our days in your peace,<br>
+                    and command that we be delivered from eternal damnation<br>
+                    and counted among the flock of those you have chosen.<br>
+                    (Through Christ our Lord. Amen.)
+                </div>
+                <hr>
+                <div class="priest">
+                    Be pleased, O God, we pray,<br>
+                    to bless, acknowledge,<br>
+                    and approve this offering in every respect;<br>
+                    make it spiritual and acceptable,<br>
+                    so that it may become for us<br>
+                    the Body and Blood of your most beloved Son,<br>
+                    our Lord Jesus Christ.
+                </div>
+                <div class="priest">
+                    On the day before he was to suffer,<br>
+                    he took bread in his holy and venerable hands,<br>
+                    and with eyes raised to heaven<br>
+                    to you, O God, his almighty Father,<br>
+                    giving you thanks, he said the blessing,<br>
+                    broke the bread<br>
+                    and gave it to his disciples, saying:
+                </div>
+                <div class="priest" style="font-weight: bold;">
+                    TAKE THIS, ALL OF YOU, AND EAT OF IT,<br>
+                    FOR THIS IS MY BODY,<br>
+                    WHICH WILL BE GIVEN UP FOR YOU.
+                </div>
+                <div class="priest">
+                    In a similar way, when supper was ended,<br>
+                    he took this precious chalice<br>
+                    in his holy and venerable hands,<br>
+                    and once more giving you thanks, he said the blessing<br>
+                    and gave the chalice to his disciples, saying:
+                </div>
+                <div class="priest" style="font-weight: bold;">
+                    TAKE THIS, ALL OF YOU, AND DRINK FROM IT,<br>
+                    FOR THIS IS THE CHALICE OF MY BLOOD,<br>
+                    THE BLOOD OF THE NEW AND ETERNAL COVENANT,<br>
+                    WHICH WILL BE POURED OUT FOR YOU AND FOR MANY<br>
+                    FOR THE FORGIVENESS OF SINS.<br>
+                    DO THIS IN MEMORY OF ME.
+                </div>
+                <div class="priest">
+                    The mystery of faith.
+                </div>
+                <select class="vselect" id="v-ep-v1-response" onchange="updateSelection(this)">
+                    <option value="1" selected>Variant 1</option>
+                    <option value="2">Variant 2</option>
+                    <option value="3">Variant 3</option>
+                </select>
+                <div class="umat" data-variant-id="v-ep-v1-response" data-variant="1">
+                    We proclaim your Death, O Lord,<br>
+                    and profess your Resurrection<br>
+                    until you come again.
+                </div>
+                <div class="umat" data-variant-id="v-ep-v1-response" data-variant="2">
+                    When we eat this Bread and drink this Cup,<br>
+                    we proclaim your Death, O Lord,<br>
+                    until you come again.
+                </div>
+                <div class="umat" data-variant-id="v-ep-v1-response" data-variant="3">
+                    Save us, Savior of the world,<br>
+                    for by your Cross and Resurrection<br>
+                    you have set us free.
+                </div>
+                <div class="priest">
+                    Therefore, O Lord,<br>
+                    as we celebrate the memorial of the blessed Passion,<br>
+                    the Resurrection from the dead,<br>
+                    and the glorious Ascension into heaven<br>
+                    of Christ, your Son, our Lord,<br>
+                    we, your servants and your holy people,<br>
+                    offer to your glorious majesty<br>
+                    from the gifts that you have given us,<br>
+                    this pure victim,<br>
+                    this holy victim,<br>
+                    this spotless victim,<br>
+                    the holy Bread of eternal life<br>
+                    and the Chalice of everlasting salvation.<br>
+                    Be pleased to look upon these offerings<br>
+                    with a serene and kindly countenance,<br>
+                    and to accept them,<br>
+                    as once you were pleased to accept<br>
+                    the gifts of your servant Abel the just,<br>
+                    the sacrifice of Abraham, our father in faith,<br>
+                    and the offering of your high priest Melchizedek,<br>
+                    a holy sacrifice, a spotless victim.<br>
+                    In humble prayer we ask you, almighty God:<br>
+                    command that these gifts be borne<br>
+                    by the hands of your holy Angel<br>
+                    to your altar on high<br>
+                    in the sight of your divine majesty,<br>
+                    so that all of us, who through this participation at the altar<br>
+                    receive the most holy Body and Blood of your Son,<br>
+                    may be filled with every grace and heavenly blessing.<br>
+                    (Through Christ our Lord. Amen.)
+                </div>
+                <div class="note">Commemoration of the Dead</div>
+                <div class="priest">
+                    Remember also, Lord, your servants N. and N.,<br>
+                    who have gone before us with the sign of faith<br>
+                    and rest in the sleep of peace.<br>
+                    Grant them, O Lord, we pray,<br>
+                    and all who sleep in Christ,<br>
+                    a place of refreshment, light and peace.<br>
+                    (Through Christ our Lord. Amen.)<br>
+                    To us, also, your servants, who, though sinners,<br>
+                    hope in your abundant mercies,<br>
+                    graciously grant some share<br>
+                    and fellowship with your holy Apostles and Martyrs:<br>
+                    with John the Baptist, Stephen,<br>
+                    Matthias, Barnabas,<br>
+                    (Ignatius, Alexander,<br>
+                    Marcellinus, Peter,<br>
+                    Felicity, Perpetua,<br>
+                    Agatha, Lucy,<br>
+                    Agnes, Cecilia, Anastasia)<br>
+                    and all your Saints;<br>
+                    admit us, we beseech you,<br>
+                    into their company,<br>
+                    not weighing our merits,<br>
+                    but granting us your pardon,<br>
+                    through Christ our Lord.<br>
+                    Through whom<br>
+                    you continue to make all these good things, O Lord;<br>
+                    you sanctify them, fill them with life,<br>
+                    bless them, and bestow them upon us.<br>
+                    Through him, and with him, and in him,<br>
+                    O God, almighty Father,<br>
+                    in the unity of the Holy Spirit,<br>
+                    all glory and honor is yours,<br>
+                    for ever and ever.
+                </div>
+                <div class="umat">Amen</div>
+            </div>
+            <div data-variant-id="v-ep" data-variant="2">
+                <div class="priest">The Lord be with you.</div>
+                <div class="umat">And with your spirit.</div>
+                <div class="priest">Lift up your hearts.</div>
+                <div class="umat">We lift them up to the Lord.</div>
+                <div class="priest">Let us give thanks to the Lord our God.</div>
+                <div class="umat">It is right and just.</div>
+                <div class="priest">
+                    It is truly right and just, our duty and our salvation,<br>
+                    always and everywhere to give you thanks, Father most holy,<br>
+                    through your beloved Son, Jesus Christ,<br>
+                    your Word through whom you made all things,<br>
+                    whom you sent as our Savior and Redeemer,<br>
+                    incarnate by the Holy Spirit and born of the Virgin.<br>
+                    Fulfilling your will and gaining for you a holy people,<br>
+                    he stretched out his hands as he endured his Passion,<br>
+                    so as to break the bonds of death and manifest the resurrection.<br>
+                    And so, with the Angels and all the Saints<br>
+                    we declare your glory,<br>
+                    as with one voice we acclaim:<br>
+                    Holy, Holy, Holy Lord God of hosts.<br>
+                    Heaven and earth are full of your glory.<br>
+                    Hosanna in the highest.<br>
+                    Blessed is he who comes in the name of the Lord.<br>
+                    Hosanna in the highest.<br>
+                    You are indeed Holy, O Lord,<br>
+                    the fount of all holiness.<br>
+                    Make holy, therefore, these gifts, we pray,<br>
+                    by sending down your Spirit upon them like the dewfall,<br>
+                    so that they may become for us<br>
+                    the Body and ✠ Blood of our Lord Jesus Christ.<br>
+                    At the time he was betrayed<br>
+                    and entered willingly into his Passion,<br>
+                    he took bread and, giving thanks, broke it,<br>
+                    and gave it to his disciples, saying:
+                </div>
+                <div class="priest" style="font-weight: bold;">
+                    TAKE THIS, ALL OF YOU, AND EAT OF IT,<br>
+                    FOR THIS IS MY BODY,<br>
+                    WHICH WILL BE GIVEN UP FOR YOU.
+                </div>
+                <div class="priest">
+                    In a similar way, when supper was ended,<br>
+                    he took the chalice<br>
+                    and, once more giving thanks,<br>
+                    he gave it to his disciples, saying:
+                </div>
+                <div class="priest" style="font-weight: bold;">
+                    TAKE THIS, ALL OF YOU, AND DRINK FROM IT,<br>
+                    FOR THIS IS THE CHALICE OF MY BLOOD,<br>
+                    THE BLOOD OF THE NEW AND ETERNAL COVENANT,<br>
+                    WHICH WILL BE POURED OUT FOR YOU AND FOR MANY<br>
+                    FOR THE FORGIVENESS OF SINS.<br>
+                    DO THIS IN MEMORY OF ME.
+                </div>
+                <div class="priest">The mystery of faith.</div>
+                <select class="vselect" id="v-ep-v2-response" onchange="updateSelection(this)">
+                    <option value="1" selected>Variant 1</option>
+                    <option value="2">Variant 2</option>
+                    <option value="3">Variant 3</option>
+                </select>
+                <div class="umat" data-variant-id="v-ep-v2-response" data-variant="1">
+                    We proclaim your Death, O Lord,<br>
+                    and profess your Resurrection<br>
+                    until you come again.
+                </div>
+                <div class="umat" data-variant-id="v-ep-v2-response" data-variant="2">
+                    When we eat this Bread and drink this Cup,<br>
+                    we proclaim your Death, O Lord,<br>
+                    until you come again.
+                </div>
+                <div class="umat" data-variant-id="v-ep-v2-response" data-variant="3">
+                    Save us, Savior of the world,<br>
+                    for by your Cross and Resurrection<br>
+                    you have set us free.
+                </div>
+                <select class="vselect" id="v-ep-v2-e1" onchange="updateSelection(this)">
+                    <option value="regular" selected>Regular</option>
+                    <option value="mfd">Mass for the dead</option>
+                </select>
+                <hr>
+                <div class="priest" data-variant-id="v-ep-v2-e1" data-variant="regular"></div>
+                <div class="priest" data-variant-id="v-ep-v2-e1" data-variant="mfd">
+                    Remember your servant N.,<br>
+                    whom you have called (today)<br>
+                    from this world to yourself.<br>
+                    Grant that he (she) who was united with your Son in a death like his,<br>
+                    may also be one with him in his Resurrection.
+                </div>
+                <hr>
+                <div class="priest">
+                    Remember also our brothers and sisters<br>
+                    who have fallen asleep in the hope of the resurrection,<br>
+                    and all who have died in your mercy:<br>
+                    welcome them into the light of your face.<br>
+                    Have mercy on us all, we pray,<br>
+                    that with the Blessed Virgin Mary, Mother of God,<br>
+                    with blessed Joseph, her Spouse,<br>
+                    with the blessed Apostles,<br>
+                    and all the Saints who have pleased you throughout the ages,<br>
+                    we may merit to be coheirs to eternal life,<br>
+                    and may praise and glorify you<br>
+                    through your Son, Jesus Christ.<br>
+                    Through him, and with him, and in him,<br>
+                    O God, almighty Father,<br>
+                    in the unity of the Holy Spirit,<br>
+                    all glory and honor is yours,<br>
+                    for ever and ever.
+                </div>
+                <div class="umat">Amen</div>
+            </div>
+            <!-- TBD variant 3 and 4 -->
+        </div>
+        <h1>The Communion Rite</h1>
+        <div class="section">
+            <div class="priest">
+                At the Savior's command<br>
+                and formed by divine teaching,<br>
+                we dare to say:
+            </div>
+            <div class="umat">
+                Our Father, who art in heaven,<br>
+                hallowed be thy name;<br>
+                thy kingdom come,<br>
+                thy will be done<br>
+                on earth as it is in heaven.<br>
+                Give us this day our daily bread,<br>
+                and forgive us our trespasses,<br>
+                as we forgive those who trespass against us;<br>
+                and lead us not into temptation,<br>
+                but deliver us from evil.
+            </div>
+            <div class="priest">
+                Deliver us, Lord, we pray, from every evil,<br>
+                graciously grant peace in our days,<br>
+                that, by the help of your mercy,<br>
+                we may be always free from sin<br>
+                and safe from all distress,<br>
+                as we await the blessed hope<br>
+                and the coming of our Savior, Jesus Christ.
+            </div>
+            <div class="umat">
+                For the kingdom,<br>
+                the power and the glory are yours<br>
+                now and for ever.
+            </div>
+            <div class="priest">
+                Lord Jesus Christ,<br>
+                who said to your Apostles:<br>
+                Peace I leave you, my peace I give you;<br>
+                look not on our sins,<br>
+                but on the faith of your Church,<br>
+                and graciously grant her peace and unity<br>
+                in accordance with your will.<br>
+                Who live and reign for ever and ever.
+            </div>
+            <div class="umat">Amen.</div>
+            <h2>Peace</h2>
+            <div class="priest">The peace of the Lord be with you always.</div>
+            <div class="umat">And with your spirit.</div>
+            <div class="priest">Let us offer each other the sign of peace.</div>
+            <h2>Communion</h2>
+            <div class="priest">
+                May this mingling of the Body and Blood<br>
+                of our Lord Jesus Christ<br>
+                bring eternal life to us who receive it.
+            </div>
+            <div class="umat">
+                Lamb of God, you take away the sins of the world,<br>
+                have mercy on us.<br>
+                Lamb of God, you take away the sins of the world,<br>
+                have mercy on us.<br>
+                <sup>(repeat as needed)</sup><br>
+                Lamb of God, you take away the sins of the world,<br>
+                grant us peace.
+            </div>
+            <select class="vselect" id="v-comm-1" onchange="updateSelection(this)">
+                <option value="1" selected>Variant 1</option>
+                <option value="2">Variant 2</option>
+            </select>
+            <div class="priest">
+                Lord Jesus Christ, Son of the living God,<br>
+                who, by the will of the Father<br>
+                and the work of the Holy Spirit,<br>
+                through your Death gave life to the world,<br>
+                free me by this, your most holy Body and Blood,<br>
+                from all my sins and from every evil;<br>
+                keep me always faithful to your commandments,<br>
+                and never let me be parted from you.
+            </div>
+            <div class="priest">
+                May the receiving of your Body and Blood,<br>
+                Lord Jesus Christ,<br>
+                not bring me to judgment and condemnation,<br>
+                but through your loving mercy<br>
+                be for me protection in mind and body<br>
+                and a healing remedy.
+            </div>
+            <div class="priest">
+                Behold the Lamb of God,<br>
+                behold him who takes away the sins of the world.<br>
+                Blessed are those called to the supper of the Lamb.
+            </div>
+            <div class="umat">
+                Lord, I am not worthy<br>
+                that you should enter under my roof,<br>
+                but only say the word<br>
+                and my soul shall be healed.
+            </div>
+            <div class="priest">
+                May the Body of Christ<br>
+                keep me safe for eternal life.
+            </div>
+            <div class="note">
+                Eligible pardon will receive the host<br>
+                When the distribution of Communion is over, the Priest performs purification
+            </div>
+            <div class="priest">
+                What has passed our lips as food, O Lord,<br>
+                may we possess in purity of heart,<br>
+                that what has been given to us in time<br>
+                may be our healing for eternity.
+            </div>
+            <div class="priest">Let us pray.</div>
+            <div class="note">All pray in silence with the Priest for a while</div>
+            <div class="umat">Amen.</div>
+        </div>
+        <h1>The Concluding Rites</h1>
+        <div class="section">
+            <div class="priest">The Lord be with you.</div>
+            <div class="umat">And with your spirit.</div>
+            <div class="priest">
+                May almighty God bless you,<br>
+                the Father, and the Son, ✠ and the Holy Spirit.
+            </div>
+            <div class="umat">Amen</div>
+            <select class="vselect" id="v-concluding" onchange="updateSelection(this)">
+                <option value="1" selected>Variant 1</option>
+                <option value="2">Variant 2</option>
+                <option value="3">Variant 3</option>
+                <option value="4">Variant 4</option>
+            </select>
+            <div class="priest" data-variant-id="v-concluding" data-variant="1">Go forth, the Mass is ended.</div>
+            <div class="priest" data-variant-id="v-concluding" data-variant="2">Go and announce the Gospel of the Lord.</div>
+            <div class="priest" data-variant-id="v-concluding" data-variant="3">Go in peace, glorifying the Lord by your life.</div>
+            <div class="priest" data-variant-id="v-concluding" data-variant="4">Go in peace.</div>
+            <div class="umat">Thanks be to God.</div>
+        </div>
+    </body>
+</html>

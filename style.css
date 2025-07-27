@@ -1,0 +1,41 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.umat {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.priest {
+    font-style: italic;
+}
+
+.umat, .priest {
+    margin-top: 0.1cm;
+    margin-bottom: 0.1cm;
+}
+
+.note {
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 0.7em;
+}
+
+select {
+    padding-bottom: 0;
+}
+
+.section {
+    margin-bottom: 0.5cm;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+        color: #fff;
+    }
+    .umat {
+        color: yellowgreen;
+    }
+}
